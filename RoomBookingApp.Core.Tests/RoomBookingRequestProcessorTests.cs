@@ -12,6 +12,7 @@ public class RoomBookingRequestProcessorTests
     private RoomBookingRequestProcessor _processor;
     private RoomBookingRequest _bookingRequest;
     private Mock<IRoomBookingService> _roomBookingServiceMock;
+    private List<Room> _availableRooms;
 
     public RoomBookingRequestProcessorTests()
     {
@@ -24,7 +25,10 @@ public class RoomBookingRequestProcessorTests
             Date = DateTime.UtcNow
         };
 
+        _availableRooms = new List<Room>() { new Room() { Id = 1 } };
         _roomBookingServiceMock = new Mock<IRoomBookingService>();
+        _roomBookingServiceMock.Setup(q => q.GetAvailableRooms(_bookingRequest.Date))
+            .Returns(_availableRooms);
         _processor = new RoomBookingRequestProcessor(_roomBookingServiceMock.Object);
     }
     [Fact]
@@ -69,6 +73,18 @@ public class RoomBookingRequestProcessorTests
         savedBooking.Should().NotBeNull();
         savedBooking.Name.Should().Be("Test");
         savedBooking.Email.Should().NotBeNullOrEmpty();
+        savedBooking.ID.Should().Be(_availableRooms.First().Id);
+    }
+
+    [Fact]
+    public void Should_NotBook_If_NoRoomAvailable()
+    {
+       _availableRooms.Clear();
+
+       _processor.BookRoom(_bookingRequest);
+
+       _roomBookingServiceMock.Verify(q => q.Save(It.IsAny<RoomBooking>()), Times.Never);   
+
     }
 
 }
