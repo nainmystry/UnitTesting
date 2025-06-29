@@ -15,6 +15,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomBookingApp.Infrastructu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomookingApp.Infrastructure.Tests", "RoomookingApp.Infrastructure.Tests\RoomookingApp.Infrastructure.Tests.csproj", "{79DC243F-0CE3-4BBC-8743-D7782020409B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RoomBookingApp.API", "RoomBookingApp.API", "{265D6A81-289D-44A2-B127-D582BEA30ECA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomBookingApp.API", "RoomBooking.API\RoomBookingApp.API.csproj", "{63B010A2-078B-40EE-8EBD-E822CE4899FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomBookingApp.API.Tests", "RoomBooking.API.Tests\RoomBookingApp.API.Tests.csproj", "{F59235D5-9D1A-4F30-BA5A-F10357DC0FE1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +43,14 @@ Global
 		{79DC243F-0CE3-4BBC-8743-D7782020409B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79DC243F-0CE3-4BBC-8743-D7782020409B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79DC243F-0CE3-4BBC-8743-D7782020409B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63B010A2-078B-40EE-8EBD-E822CE4899FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63B010A2-078B-40EE-8EBD-E822CE4899FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63B010A2-078B-40EE-8EBD-E822CE4899FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63B010A2-078B-40EE-8EBD-E822CE4899FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F59235D5-9D1A-4F30-BA5A-F10357DC0FE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F59235D5-9D1A-4F30-BA5A-F10357DC0FE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F59235D5-9D1A-4F30-BA5A-F10357DC0FE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F59235D5-9D1A-4F30-BA5A-F10357DC0FE1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +60,8 @@ Global
 		{12699E1C-A19F-4341-9E68-5FE83DAA5BE4} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{5E3D6300-E642-4872-B84D-4931449D830F} = {490777C5-70CE-4858-BD02-E46D4A74FCEB}
 		{79DC243F-0CE3-4BBC-8743-D7782020409B} = {490777C5-70CE-4858-BD02-E46D4A74FCEB}
+		{63B010A2-078B-40EE-8EBD-E822CE4899FF} = {265D6A81-289D-44A2-B127-D582BEA30ECA}
+		{F59235D5-9D1A-4F30-BA5A-F10357DC0FE1} = {265D6A81-289D-44A2-B127-D582BEA30ECA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E8530D33-07B1-439E-983A-C07E919C5EDD}
