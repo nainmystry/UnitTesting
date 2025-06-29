@@ -1,5 +1,6 @@
 ﻿using RoomBookingApp.Core.DataServices;
 using RoomBookingApp.Core.Domain;
+using RoomBookingApp.Core.Entities.BaseEntities;
 using RoomBookingApp.Core.Enums;
 using RoomBookingApp.Core.Models;
 
@@ -51,7 +52,6 @@ namespace RoomBookingApp.Core.Processors
             {
                 Name = bookingRequest.Name,
                 Email = bookingRequest.Email,
-                ID = bookingRequest.ID,
                 Date = bookingRequest.Date,
             };
         }
