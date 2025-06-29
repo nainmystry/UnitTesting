@@ -6,7 +6,7 @@ using RoomBookingApp.Core.Processors;
 namespace RoomBookingApp.API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/[controller]")]
     public class RoomBookingController : ControllerBase
     {
         private readonly IRoomBookingRequestProcessor _roomBookingRequestProcessor;
@@ -16,6 +16,7 @@ namespace RoomBookingApp.API.Controllers
             _roomBookingRequestProcessor = roomBookingRequestProcessor;
         }
 
+        [HttpGet("BookRoom")]
         public async Task<IActionResult> BookRoom(RoomBookingRequest request)
         {
             if (ModelState.IsValid)
@@ -30,6 +31,7 @@ namespace RoomBookingApp.API.Controllers
             return BadRequest(ModelState);
         }
 
+        [HttpGet("Index")]
         public IActionResult Index()
         {
             return Ok();
