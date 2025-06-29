@@ -1,13 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RoomBookingApp.Core", "RoomBookingApp.Core", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomBookingApp.Core.Tests", "RoomBookingApp.Core.Tests\RoomBookingApp.Core.Tests.csproj", "{D6546E78-20F4-4CE4-957D-595BAA78B35F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomBookingApp.Core", "RoomBookingApp.Core\RoomBookingApp.Core.csproj", "{12699E1C-A19F-4341-9E68-5FE83DAA5BE4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RoomBookingApp.Infrastructure", "RoomBookingApp.Infrastructure", "{490777C5-70CE-4858-BD02-E46D4A74FCEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomBookingApp.Infrastructure", "RoomBookingApp.Infrastructure\RoomBookingApp.Infrastructure.csproj", "{5E3D6300-E642-4872-B84D-4931449D830F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomookingApp.Infrastructure.Tests", "RoomookingApp.Infrastructure.Tests\RoomookingApp.Infrastructure.Tests.csproj", "{79DC243F-0CE3-4BBC-8743-D7782020409B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +29,14 @@ Global
 		{12699E1C-A19F-4341-9E68-5FE83DAA5BE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12699E1C-A19F-4341-9E68-5FE83DAA5BE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12699E1C-A19F-4341-9E68-5FE83DAA5BE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E3D6300-E642-4872-B84D-4931449D830F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E3D6300-E642-4872-B84D-4931449D830F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E3D6300-E642-4872-B84D-4931449D830F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E3D6300-E642-4872-B84D-4931449D830F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79DC243F-0CE3-4BBC-8743-D7782020409B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79DC243F-0CE3-4BBC-8743-D7782020409B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79DC243F-0CE3-4BBC-8743-D7782020409B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79DC243F-0CE3-4BBC-8743-D7782020409B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +44,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{D6546E78-20F4-4CE4-957D-595BAA78B35F} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{12699E1C-A19F-4341-9E68-5FE83DAA5BE4} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{5E3D6300-E642-4872-B84D-4931449D830F} = {490777C5-70CE-4858-BD02-E46D4A74FCEB}
+		{79DC243F-0CE3-4BBC-8743-D7782020409B} = {490777C5-70CE-4858-BD02-E46D4A74FCEB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E8530D33-07B1-439E-983A-C07E919C5EDD}

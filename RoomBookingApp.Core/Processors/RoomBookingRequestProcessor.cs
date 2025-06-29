@@ -1,5 +1,6 @@
 ﻿using RoomBookingApp.Core.DataServices;
 using RoomBookingApp.Core.Domain;
+using RoomBookingApp.Core.Entities.BaseEntities;
 using RoomBookingApp.Core.Enums;
 using RoomBookingApp.Core.Models;
 
@@ -26,10 +27,13 @@ namespace RoomBookingApp.Core.Processors
 
             if (avilableRooms != null && avilableRooms.Any())
             {
-                _roomBookingService.Save(CreateRoomBookingObject<RoomBooking>(bookingRequest));
-                result.ID = bookingRequest.ID;
+                var room = avilableRooms.First();
+                var roomBooking = CreateRoomBookingObject<RoomBooking>(bookingRequest);
+                roomBooking.RoomId = room.Id;
+                _roomBookingService.Save(roomBooking);
+
+                result.RoomBookingId = roomBooking.ID;
                 result.Flag = BookingFlag.Success;
-                result.RoomBookingId = bookingRequest.ID;
             }
             else
             {
@@ -51,7 +55,6 @@ namespace RoomBookingApp.Core.Processors
             {
                 Name = bookingRequest.Name,
                 Email = bookingRequest.Email,
-                ID = bookingRequest.ID,
                 Date = bookingRequest.Date,
             };
         }
