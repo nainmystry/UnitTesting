@@ -74,7 +74,7 @@ public class RoomBookingRequestProcessorTests
         savedBooking.Should().NotBeNull();
         savedBooking.Name.Should().Be("Test");
         savedBooking.Email.Should().NotBeNullOrEmpty();
-        //savedBooking.ID.Should().Be(_availableRooms.First().Id);
+        savedBooking.ID.Should().Be(_availableRooms.First().Id);
     }
 
     [Fact]
