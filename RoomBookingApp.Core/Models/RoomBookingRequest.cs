@@ -1,6 +1,6 @@
 ﻿namespace RoomBookingApp.Core.Models
 {
-    public class RoomBookingResult : RoomBookingBase
+    public class RoomBookingRequest : RoomBookingBase
     {
 
     }
