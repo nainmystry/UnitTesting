@@ -6,7 +6,7 @@ using RoomBookingApp.Core.Models;
 
 namespace RoomBookingApp.Core.Processors
 {
-    public class RoomBookingRequestProcessor
+    public class RoomBookingRequestProcessor : IRoomBookingRequestProcessor
     {
         private IRoomBookingService _roomBookingService;
 
@@ -17,7 +17,7 @@ namespace RoomBookingApp.Core.Processors
 
         public RoomBookingResult BookRoom(RoomBookingRequest bookingRequest)
         {
-            if(bookingRequest is null)
+            if (bookingRequest is null)
             {
                 throw new ArgumentNullException(nameof(bookingRequest));
             }
